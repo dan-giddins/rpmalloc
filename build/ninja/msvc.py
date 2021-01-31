@@ -265,7 +265,7 @@ class MSVCToolchain(toolchain.Toolchain):
     else:
       flags += ['/Ob2', '/Ot', '/GT', '/GL', '/GF']
       if config == 'release':
-        flags += ['/O2', '/D' '"BUILD_RELEASE=1"']
+        flags += ['/D', '"BUILD_RELEASE=1"']
       elif config == 'profile':
         flags += ['/Ox', '/D', '"BUILD_PROFILE=1"']
       elif config == 'deploy':
